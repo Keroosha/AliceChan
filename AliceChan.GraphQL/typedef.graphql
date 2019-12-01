@@ -1,7 +1,8 @@
 # Abstraction
 
 type PageInfo {
-    lastGuid: ID!
+    cursor: ID!
+    lastCursor: ID!
     hasMore: Boolean!
 }
 
@@ -12,15 +13,23 @@ interface CursoredList {
 
 # Entities
 
+enum ContentType {
+    Picture,
+    Video,
+    Link,
+    Audio,
+}
+
 type Content {
     id: ID!
-    
+    contentType: ContentType!
+    uri: String!
 }
 
 type Post {
     id: ID!
     postNumber: Int!
-    contents: Boolean
+    contents: Boolean!
 }
 
 type Thread {
@@ -41,11 +50,15 @@ type ThreadList implements CursoredList {
     pageInfo: PageInfo!
 }
 
+type ContentList implements CursoredList {
+    items: [ContentList!]!
+    pageInfo: PageInfo!
+}
+
 
 type Query {
     boards: [Board!]!
 }
 
 type Mutation {
-
 }
