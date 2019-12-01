@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.IdGenerators;
 
 namespace AliceChan.DB
 {
@@ -13,33 +16,57 @@ namespace AliceChan.DB
   
   public class Content
   {
+    [BsonId(IdGenerator = typeof(CombGuidGenerator))]
+    [BsonRepresentation(BsonType.ObjectId)]
     public Guid Id { get; set; }
+    
+    [BsonRepresentation(BsonType.Int32)]
     public ContentType ContentType { get; set; }
+    
     public Uri Link { get; set; }
   }
   
   public class Post
   {
-    public Guid Id { get; set; }
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
     public long PostNumber { get; set; }
     public string Text { get; set; }
+    
     public DateTime CreatedAt { get; set; }
-    public IEnumerable<Content> Contents { get; set; }
+    
+    [BsonRepresentation(BsonType.ObjectId)]
+    public IEnumerable<Guid> ContentsIds { get; set; }
   }
   
   public class Thread
   {
+    [BsonId(IdGenerator = typeof(CombGuidGenerator))]
+    [BsonRepresentation(BsonType.ObjectId)]
     public Guid Id { get; set; }
+    
+    [BsonRepresentation(BsonType.ObjectId)]
+    public Guid BoardId { get; set; }
+    
     public string Name { get; set; }
     public DateTime CreatedAt { get; set; }
-    public IEnumerable<Post> Posts { get; set; }
+    
+    [BsonRepresentation(BsonType.ObjectId)]
+    public IEnumerable<Guid> PostsIds { get; set; }
   }
   
   public class Board
   {
+    [BsonId(IdGenerator = typeof(CombGuidGenerator))]
+    [BsonRepresentation(BsonType.ObjectId)]
     public Guid Id { get; set; }
+    
     public string Name { get; set; }
-    public IEnumerable<Thread> Threads { get; set; }
-    public IEnumerable<Post> Messages { get; set; }
+    
+    [BsonRepresentation(BsonType.ObjectId)]
+    public IEnumerable<Guid> ThreadsIds { get; set; }
+    
+    [BsonRepresentation(BsonType.ObjectId)]
+    public IEnumerable<Guid> MessagesIds { get; set; }
   }
 }

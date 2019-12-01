@@ -60,5 +60,9 @@ type Query {
     boards: [Board!]!
 }
 
-type Mutation {
+type Mutation { }
+
+schema {
+    query: Query
+    mutation: Mutation
 }

@@ -8,4 +8,19 @@
       <Folder Include="Controllers" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="HotChocolate" Version="11.0.0-preview.58" />
+      <PackageReference Include="HotChocolate.AspNetCore" Version="11.0.0-preview.58" />
+      <PackageReference Include="HotChocolate.AspNetCore.Playground" Version="11.0.0-preview.58" />
+      <PackageReference Include="HotChocolate.AspNetCore.Voyager" Version="11.0.0-preview.44" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AliceChan.GraphQL\AliceChan.GraphQL.csproj" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <RunWorkingDirectory>$(MSBuildProjectDirectory)</RunWorkingDirectory>
+    </PropertyGroup>
+
 </Project>
