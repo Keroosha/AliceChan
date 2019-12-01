@@ -1,0 +1,51 @@
+# Abstraction
+
+type PageInfo {
+    lastGuid: ID!
+    hasMore: Boolean!
+}
+
+interface CursoredList {
+    pageInfo: PageInfo!
+}
+
+
+# Entities
+
+type Content {
+    id: ID!
+    
+}
+
+type Post {
+    id: ID!
+    postNumber: Int!
+    contents: Boolean
+}
+
+type Thread {
+    id: ID!
+    name: String!
+}
+
+type Board {
+    id: ID!
+    name: String!
+    threads: ThreadList!
+}
+
+# Cursored Lists
+
+type ThreadList implements CursoredList {
+    items: [Thread!]!
+    pageInfo: PageInfo!
+}
+
+
+type Query {
+    boards: [Board!]!
+}
+
+type Mutation {
+
+}
