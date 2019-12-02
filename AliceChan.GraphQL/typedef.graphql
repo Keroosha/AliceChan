@@ -29,7 +29,7 @@ type Content {
 type Post {
     id: ID!
     postNumber: Int!
-    contents: Boolean!
+#    contents: Boolean!
 }
 
 type Thread {
@@ -40,7 +40,7 @@ type Thread {
 type Board {
     id: ID!
     name: String!
-    threads: ThreadList!
+#    threads: ThreadList!
 }
 
 # Cursored Lists

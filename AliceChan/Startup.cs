@@ -22,8 +22,8 @@ namespace AliceChan
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-      services.AddControllers();
       services.AddGraphQL(provider => new SchemaGenerator(provider).Schema);
+      services.AddControllers();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,11 +40,12 @@ namespace AliceChan
 
       app.UseAuthorization();
 
-      app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
-
       app
         .UseGraphQL("/graphql")
+        .UsePlayground("/graphql")
         .UseVoyager("/graphql");
+      
+      app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
     }
   }
 }

@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliceChan.GraphQL", "AliceC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliceChan.DB", "AliceChan.DB\AliceChan.DB.csproj", "{DDA6DB72-6A03-4069-A927-74693C72170B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliceChan.Shared", "AliceChan.Shared\AliceChan.Shared.csproj", "{E2D09899-02F4-46AF-AAB5-5F4DBFD1CD73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliceChan.GraphQL.Utils", "AliceChan.GraphQL.Utils\AliceChan.GraphQL.Utils.csproj", "{B87C7AFD-056A-4939-A1BC-AEB11AE79C7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{DDA6DB72-6A03-4069-A927-74693C72170B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDA6DB72-6A03-4069-A927-74693C72170B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDA6DB72-6A03-4069-A927-74693C72170B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2D09899-02F4-46AF-AAB5-5F4DBFD1CD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2D09899-02F4-46AF-AAB5-5F4DBFD1CD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2D09899-02F4-46AF-AAB5-5F4DBFD1CD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2D09899-02F4-46AF-AAB5-5F4DBFD1CD73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B87C7AFD-056A-4939-A1BC-AEB11AE79C7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87C7AFD-056A-4939-A1BC-AEB11AE79C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87C7AFD-056A-4939-A1BC-AEB11AE79C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87C7AFD-056A-4939-A1BC-AEB11AE79C7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

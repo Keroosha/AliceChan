@@ -1,19 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using AliceChan.Shared;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson.Serialization.IdGenerators;
 
 namespace AliceChan.DB
 {
-  public enum ContentType
-  {
-    Picture,
-    Video,
-    Link,
-    Audio,
-  }
-  
   public class Content
   {
     [BsonId(IdGenerator = typeof(CombGuidGenerator))]

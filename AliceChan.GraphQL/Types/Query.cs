@@ -1,14 +1,16 @@
 using System;
 using System.Collections.Generic;
+using AliceChan.GraphQL.Utils.Interfaces;
+using HotChocolate;
 
 namespace AliceChan.GraphQL.Types
 {
-  public class Query
+  public class Query : IBindAsComplexType
   {
-    public IEnumerable<dynamic> boards => new []
+    public IEnumerable<Board> boards(IEnumerable<Guid> guids) => new []
     {
-      new { id = new Guid(), name = "test" },
-      new { id = new Guid(), name = "test1" }
+      new Board { Id = new Guid(), Name = "test" },
+      new Board { Id = new Guid(), Name = "test1" }
     };
   }
 }

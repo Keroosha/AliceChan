@@ -1,6 +1,8 @@
+using AliceChan.GraphQL.Utils.Interfaces;
+
 namespace AliceChan.GraphQL.Types
 {
-  public class Mutation
+  public class Mutation : IBindAsComplexType
   {
     
   }

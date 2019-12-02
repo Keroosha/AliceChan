@@ -14,4 +14,9 @@
       <PackageReference Include="HotChocolate" Version="11.0.0-preview.58" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\AliceChan.GraphQL.Utils\AliceChan.GraphQL.Utils.csproj" />
+      <ProjectReference Include="..\AliceChan.Shared\AliceChan.Shared.csproj" />
+    </ItemGroup>
+
 </Project>

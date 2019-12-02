@@ -1,7 +1,7 @@
 using System;
 using AliceChan.GraphQL.Types;
+using AliceChan.GraphQL.Utils.Extensions;
 using HotChocolate;
-using HotChocolate.Execution;
 using HotChocolate.Types;
 
 namespace AliceChan.GraphQL
@@ -15,9 +15,9 @@ namespace AliceChan.GraphQL
       Schema = new SchemaBuilder()
         .AddServices(serviceProvider)
         .AddDocumentFromFile("typedef.graphql")
-        .BindComplexType<Query>()
-        .BindComplexType<Mutation>()
+        .AddComplexTypesFromAssembly(typeof(SchemaGenerator).Assembly)
         .BindClrType<Guid, StringType>()
+        .BindClrType<Uri, StringType>()
         .Create();
     }
   }
