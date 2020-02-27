@@ -45,7 +45,7 @@ namespace AliceChan
         .UsePlayground("/graphql")
         .UseVoyager("/graphql");
       
-      app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+      // app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
     }
   }
 }

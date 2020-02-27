@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
@@ -9,10 +9,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="HotChocolate" Version="11.0.0-preview.58" />
-      <PackageReference Include="HotChocolate.AspNetCore" Version="11.0.0-preview.58" />
-      <PackageReference Include="HotChocolate.AspNetCore.Playground" Version="11.0.0-preview.58" />
-      <PackageReference Include="HotChocolate.AspNetCore.Voyager" Version="11.0.0-preview.44" />
+      <PackageReference Include="HotChocolate" Version="11.0.0-preview.101" />
+      <PackageReference Include="HotChocolate.AspNetCore" Version="11.0.0-preview.101" />
+      <PackageReference Include="HotChocolate.AspNetCore.Playground" Version="11.0.0-preview.101" />
+      <PackageReference Include="HotChocolate.AspNetCore.Voyager" Version="11.0.0-preview.101" />
     </ItemGroup>
 
     <ItemGroup>

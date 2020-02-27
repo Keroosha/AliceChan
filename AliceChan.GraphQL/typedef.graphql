@@ -60,7 +60,9 @@ type Query {
     boards: [Board!]!
 }
 
-type Mutation { }
+type Mutation { 
+    test: Boolean
+}
 
 schema {
     query: Query
